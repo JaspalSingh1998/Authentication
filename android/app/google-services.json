@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1049116415004",
+    "project_id": "rn-assignment-523b3",
+    "storage_bucket": "rn-assignment-523b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049116415004:android:6048d64ab5eb0f7e85bbd9",
+        "android_client_info": {
+          "package_name": "com.authentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049116415004-eh9pv5fjkq6ggp1f9svrsq7kog9pcdn7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdFTM976BpMU2xhgSQsFC9hp0mGmuUC7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049116415004-eh9pv5fjkq6ggp1f9svrsq7kog9pcdn7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1049116415004-pc1ck63u86hbqa2562fhmag4temnumc0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.AuthenticationAssignment"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
