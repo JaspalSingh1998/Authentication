@@ -13,7 +13,6 @@ import {COLORS, SIZES, FONTS} from '../constants';
 const {height} = Dimensions.get('window');
 
 const LandingScreen = ({navigation}) => {
-  console.log(FONTS);
   return (
     <SafeAreaView>
       <View>

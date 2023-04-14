@@ -15,19 +15,19 @@ const RegisterScreen = ({navigation}) => {
 
   return (
     <SafeAreaView>
-      <View style={{padding: Spacing * 2}}>
+      <View style={{padding: SIZES.base * 2}}>
         <View style={{alignItems: 'center'}}>
           <Text
             style={{
-              fontSize: fonts.xLarge,
-              color: Colors.primary,
-              marginVertical: Spacing * 3,
+              fontSize: FONTS.xLarge,
+              color: COLORS.primary,
+              marginVertical: SIZES.base * 3,
             }}>
             Create account
           </Text>
           <Text
             style={{
-              fontSize: fonts.large,
+              fontSize: FONTS.large,
               maxWidth: '80%',
               textAlign: 'center',
             }}>
@@ -36,7 +36,7 @@ const RegisterScreen = ({navigation}) => {
         </View>
         <View
           style={{
-            marginVertical: Spacing * 3,
+            marginVertical: SIZES.base * 3,
           }}>
           <AppTextInput
             placeholder="First Name"
@@ -60,23 +60,23 @@ const RegisterScreen = ({navigation}) => {
         <TouchableOpacity
           onPress={() => signUp(firstName, lastName, email, password)}
           style={{
-            padding: Spacing * 2,
-            backgroundColor: Colors.primary,
-            marginVertical: Spacing * 3,
-            borderRadius: Spacing,
-            shadowColor: Colors.primary,
+            padding: SIZES.base * 2,
+            backgroundColor: COLORS.secondary,
+            marginVertical: SIZES.base * 3,
+            borderRadius: SIZES.base,
+            shadowColor: COLORS.primary,
             shadowOffset: {
               width: 0,
-              height: Spacing,
+              height: SIZES.base,
             },
             shadowOpacity: 0.3,
-            shadowRadius: Spacing,
+            shadowRadius: SIZES.base,
           }}>
           <Text
             style={{
-              color: Colors.onPrimary,
+              color: COLORS.white,
               textAlign: 'center',
-              fontSize: fonts.large,
+              fontSize: FONTS.large,
             }}>
             Sign up
           </Text>
@@ -84,13 +84,13 @@ const RegisterScreen = ({navigation}) => {
         <TouchableOpacity
           onPress={() => navigation.navigate('Login')}
           style={{
-            padding: Spacing,
+            padding: SIZES.base,
           }}>
           <Text
             style={{
-              color: Colors.text,
+              color: COLORS.text,
               textAlign: 'center',
-              fontSize: fonts.small,
+              fontSize: FONTS.small,
             }}>
             Already have an account?
           </Text>
