@@ -9,12 +9,11 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
-import Spacing from '../constants/spacing';
-import fonts from '../constants/fonts';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {COLORS, SIZES, FONTS} from '../constants';
 const {height} = Dimensions.get('window');
 
 const LandingScreen = ({navigation}) => {
+  console.log(FONTS);
   return (
     <SafeAreaView>
       <View>
@@ -24,23 +23,23 @@ const LandingScreen = ({navigation}) => {
         />
         <View
           style={{
-            paddingHorizontal: Spacing * 4,
-            paddingTop: Spacing * 4,
+            paddingHorizontal: SIZES.base * 4,
+            paddingTop: SIZES.base * 4,
           }}>
           <Text
             style={{
-              fontSize: fonts.xxLarge,
-              color: Colors.primary,
+              fontSize: FONTS.xxLarge,
+              color: COLORS.secondary,
               textAlign: 'center',
             }}>
             Secure Your Feelings Here
           </Text>
           <Text
             style={{
-              fontSize: fonts.small,
-              color: Colors.text,
+              fontSize: FONTS.small,
+              color: COLORS.text,
               textAlign: 'center',
-              marginTop: Spacing * 2,
+              marginTop: SIZES.base * 2,
             }}>
             Write down your personal, professional and travel stories with us
             without worrying about the privacy, we have got you covered with
@@ -49,30 +48,30 @@ const LandingScreen = ({navigation}) => {
         </View>
         <View
           style={{
-            paddingHorizontal: Spacing * 2,
-            paddingTop: Spacing * 6,
+            paddingHorizontal: SIZES.base * 2,
+            paddingTop: SIZES.base * 6,
             flexDirection: 'row',
           }}>
           <TouchableOpacity
             onPress={() => navigation.navigate('Login')}
             style={{
-              backgroundColor: Colors.primary,
-              paddingVertical: Spacing * 1.5,
-              paddingHorizontal: Spacing * 2,
+              backgroundColor: COLORS.secondary,
+              paddingVertical: SIZES.base * 1.5,
+              paddingHorizontal: SIZES.base * 2,
               width: '48%',
-              borderRadius: Spacing,
-              shadowColor: Colors.primary,
+              borderRadius: SIZES.base,
+              shadowColor: COLORS.primary,
               shadowOffset: {
                 width: 0,
-                height: Spacing,
+                height: SIZES.base,
               },
               shadowOpacity: 0.3,
-              shadowRadius: Spacing,
+              shadowRadius: SIZES.base,
             }}>
             <Text
               style={{
-                color: Colors.onPrimary,
-                fontSize: fonts.large,
+                color: COLORS.white,
+                fontSize: FONTS.large,
                 textAlign: 'center',
               }}>
               Login
@@ -81,15 +80,15 @@ const LandingScreen = ({navigation}) => {
           <TouchableOpacity
             onPress={() => navigation.navigate('Register')}
             style={{
-              paddingVertical: Spacing * 1.5,
-              paddingHorizontal: Spacing * 2,
+              paddingVertical: SIZES.base * 1.5,
+              paddingHorizontal: SIZES.base * 2,
               width: '48%',
-              borderRadius: Spacing,
+              borderRadius: SIZES.base,
             }}>
             <Text
               style={{
-                color: Colors.text,
-                fontSize: fonts.large,
+                color: COLORS.text,
+                fontSize: FONTS.large,
                 textAlign: 'center',
               }}>
               Register

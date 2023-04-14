@@ -8,7 +8,7 @@ const Tab = createBottomTabNavigator();
 
 const AppStack = ({navigation}) => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{headerShown: false}}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>

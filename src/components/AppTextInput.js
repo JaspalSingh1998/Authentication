@@ -1,9 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import {TextInput} from 'react-native';
 import React, {useState} from 'react';
-import Spacing from '../constants/spacing';
-import fonts from '../constants/fonts';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {COLORS, SIZES, FONTS} from '../constants';
 
 function AppTextInput({handleChange, ...otherProps}) {
   const [focused, setFocused] = useState(false);
@@ -12,22 +10,22 @@ function AppTextInput({handleChange, ...otherProps}) {
       onChangeText={value => handleChange(value)}
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
-      placeholderTextColor={Colors.darkText}
+      placeholderTextColor={COLORS.black}
       style={[
         {
-          fontSize: fonts.small,
-          padding: Spacing * 2,
-          backgroundColor: Colors.lightPrimary,
-          borderRadius: Spacing,
-          marginVertical: Spacing,
+          fontSize: FONTS.small,
+          padding: SIZES.base * 2,
+          backgroundColor: COLORS.white,
+          borderRadius: SIZES.base,
+          marginVertical: SIZES.base,
         },
         focused && {
           borderWidth: 3,
-          borderColor: Colors.primary,
-          shadowOffset: {width: 4, height: Spacing},
-          shadowColor: Colors.primary,
+          borderColor: COLORS.primary,
+          shadowOffset: {width: 4, height: SIZES.base},
+          shadowColor: COLORS.primary,
           shadowOpacity: 0.2,
-          shadowRadius: Spacing,
+          shadowRadius: SIZES.base,
         },
       ]}
       {...otherProps}

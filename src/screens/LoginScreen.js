@@ -1,35 +1,33 @@
 /* eslint-disable react-native/no-inline-styles */
 import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
 import React, {useContext, useState} from 'react';
-import Spacing from '../constants/spacing';
-import fonts from '../constants/fonts';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {COLORS, SIZES, FONTS} from '../constants';
 import AppTextInput from '../components/AppTextInput';
 import {AuthContext} from '../models/AuthProvider';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const {login} = useContext(AuthContext);
+  const {signIn} = useContext(AuthContext);
 
   function handleSignIn() {
-    login(email, password);
+    signIn(email, password);
   }
   return (
     <SafeAreaView>
-      <View style={{padding: Spacing * 2}}>
+      <View style={{padding: SIZES.base * 2}}>
         <View style={{alignItems: 'center'}}>
           <Text
             style={{
-              fontSize: fonts.xLarge,
-              color: Colors.primary,
-              marginVertical: Spacing * 3,
+              fontSize: FONTS.xLarge,
+              color: COLORS.primary,
+              marginVertical: SIZES.base * 3,
             }}>
             Login Here
           </Text>
           <Text
             style={{
-              fontSize: fonts.large,
+              fontSize: FONTS.large,
               maxWidth: '60%',
               textAlign: 'center',
             }}>
@@ -38,7 +36,7 @@ const LoginScreen = ({navigation}) => {
         </View>
         <View
           style={{
-            marginVertical: Spacing * 3,
+            marginVertical: SIZES.base * 3,
           }}>
           <AppTextInput
             keyboardType="email-address"
@@ -54,23 +52,23 @@ const LoginScreen = ({navigation}) => {
         <TouchableOpacity
           onPress={handleSignIn}
           style={{
-            padding: Spacing * 2,
-            backgroundColor: Colors.primary,
-            marginVertical: Spacing * 3,
-            borderRadius: Spacing,
-            shadowColor: Colors.primary,
+            padding: SIZES.base * 2,
+            backgroundColor: COLORS.secondary,
+            marginVertical: SIZES.base * 3,
+            borderRadius: SIZES.base,
+            shadowColor: COLORS.primary,
             shadowOffset: {
               width: 0,
-              height: Spacing,
+              height: SIZES.base,
             },
             shadowOpacity: 0.3,
-            shadowRadius: Spacing,
+            shadowRadius: SIZES.base,
           }}>
           <Text
             style={{
-              color: Colors.onPrimary,
+              color: COLORS.white,
               textAlign: 'center',
-              fontSize: fonts.large,
+              fontSize: FONTS.large,
             }}>
             Sign in
           </Text>
@@ -78,13 +76,13 @@ const LoginScreen = ({navigation}) => {
         <TouchableOpacity
           onPress={() => navigation.navigate('Register')}
           style={{
-            padding: Spacing,
+            padding: SIZES.base,
           }}>
           <Text
             style={{
-              color: Colors.text,
+              color: COLORS.text,
               textAlign: 'center',
-              fontSize: fonts.small,
+              fontSize: FONTS.small,
             }}>
             Create new account
           </Text>

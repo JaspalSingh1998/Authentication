@@ -1,9 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
 import React, {useState, useContext} from 'react';
-import Spacing from '../constants/spacing';
-import fonts from '../constants/fonts';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {COLORS, SIZES, FONTS} from '../constants';
 import AppTextInput from '../components/AppTextInput';
 import {AuthContext} from '../models/AuthProvider';
 
